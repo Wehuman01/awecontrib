@@ -92,6 +92,8 @@ JUNK_RE='(\.egg-info/|__pycache__/|\.pytest_cache/|\.DS_Store$|\.pyc$|^node_modu
 | [awefork](https://github.com/wehuman01/awefork) | 在任意回合 fork AI 编程会话的桌面工作台 | Electron/TypeScript |
 | [awedot](https://github.com/Webioinfo01/awedot) | 打书签并恢复编程会话的桌面悬浮球 | Tauri/Rust + TypeScript |
 
+这个系列还在维护 [AgentX](https://github.com/Webioinfo01/agentx-hub)——科研 AI agent 社区目录，由 awescholar 校验流水线维护。
+
 ## v1 不做
 
 badge 改写（PyPI/npm badge 本来就是动态的）、git 自动化、批量仓库扫描、monorepo 支持。

@@ -96,6 +96,8 @@ Every repo in the [awe series](https://github.com/wehuman01) runs through the sa
 | [awefork](https://github.com/wehuman01/awefork) | Desktop workbench for forking AI coding sessions at any turn | Electron/TypeScript |
 | [awedot](https://github.com/Webioinfo01/awedot) | Desktop floating ball that bookmarks and restores coding sessions | Tauri/Rust + TypeScript |
 
+The family also curates [AgentX](https://github.com/Webioinfo01/agentx-hub) — a community directory of scientific research AI agents, run on awescholar's validated pipeline.
+
 ## Not in v1
 
 Badge rewriting (PyPI/npm badges are already dynamic), git automation, batch repo scanning, monorepo support.
