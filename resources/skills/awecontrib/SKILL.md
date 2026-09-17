@@ -10,7 +10,7 @@ One verify entry per repo, one version truth per repo. Use the `awecontrib` CLI 
 Two things get installed through two different channels, and this skill is only one of them:
 
 - **The CLI** (what you run): `pip install awecontrib` from PyPI. Until a release is on PyPI, install from the checkout: `pip install -e <path>` or call `<checkout>/.venv/bin/awecontrib`. Check with `awecontrib --version` before assuming it is available.
-- **This skill** (what tells you when to run it): `aweskill install Webioinfo01/awecontrib`. Installing the skill does not install the CLI.
+- **This skill** (what tells you when to run it): `aweskill install wehuman01/awecontrib`. Installing the skill does not install the CLI.
 
 The invariant is **one entry point, and local runs exactly what CI runs**. The entry point's shape follows the stack: Python repos get an executable `./verify` file, Node repos get a `verify` script in package.json (`npm run verify` / `pnpm run verify`). Do not memorise one shape; look for whichever the repo has.
 

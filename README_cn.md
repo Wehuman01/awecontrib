@@ -31,7 +31,7 @@ pip install awecontrib
 仓库自带配套技能 `resources/skills/awecontrib`，告诉 coding agent 什么时候该用这个 CLI：
 
 ```bash
-aweskill install Webioinfo01/awecontrib
+aweskill install wehuman01/awecontrib
 ```
 
 ## 命令
@@ -76,20 +76,20 @@ JUNK_RE='(\.egg-info/|__pycache__/|\.pytest_cache/|\.DS_Store$|\.pyc$|^node_modu
 
 ## 实际使用：awe 系列
 
-[awe 系列](https://github.com/Webioinfo01)的每个仓库都跑同一条 `./verify` 门禁——这个工具先在那批仓库上维护，每个项目都是活案例：
+[awe 系列](https://github.com/wehuman01)的每个仓库都跑同一条 `./verify` 门禁——这个工具先在那批仓库上维护，每个项目都是活案例：
 
 | 仓库 | 做什么 | 技术栈 |
 |---|---|---|
-| [awerouter](https://github.com/Webioinfo01/awerouter) | 把 coding agent 流量在 flash/pro 模型间分流的 LLM 代理 | Python |
-| [awecompress](https://github.com/Webioinfo01/awecompress) | 把旧对话轮冻结成缓存摘要的上下文压缩代理 | Python |
-| [awewarm](https://github.com/Webioinfo01/awewarm) | 按计划给 AI 编程订阅窗口保温 | Python |
-| [aweswitch](https://github.com/Webioinfo01/aweswitch) | 切换 Claude Code、Codex、OpenCode、ZCode 的 API profile | Python |
-| [awescholar](https://github.com/Webioinfo01/awescholar) | AI 可操作的学术文献检索与策展 CLI | Python |
-| [aweshelf](https://github.com/Webioinfo01/aweshelf) | 给 AI 编程会话打书签、分类、恢复 | Python |
-| [aweskill](https://github.com/Webioinfo01/aweskill) | 把 agent 技能投影到 47+ agent 目录的包管理器 | Node/TypeScript |
-| [awehitch](https://github.com/Webioinfo01/awehitch) | 通过 MCP 把 ChatGPT 网页当本地编程 agent 的规划大脑 | Node/TypeScript |
-| [aweshare](https://github.com/Webioinfo01/aweshare) | 共享闲置 Ollama/vLLM 算力的本地优先中继 | Node/TypeScript |
-| [awefork](https://github.com/Webioinfo01/awefork) | 在任意回合 fork AI 编程会话的桌面工作台 | Electron/TypeScript |
+| [awerouter](https://github.com/wehuman01/awerouter) | 把 coding agent 流量在 flash/pro 模型间分流的 LLM 代理 | Python |
+| [awecompress](https://github.com/wehuman01/awecompress) | 把旧对话轮冻结成缓存摘要的上下文压缩代理 | Python |
+| [awewarm](https://github.com/wehuman01/awewarm) | 按计划给 AI 编程订阅窗口保温 | Python |
+| [aweswitch](https://github.com/wehuman01/aweswitch) | 切换 Claude Code、Codex、OpenCode、ZCode 的 API profile | Python |
+| [awescholar](https://github.com/wehuman01/awescholar) | AI 可操作的学术文献检索与策展 CLI | Python |
+| [aweshelf](https://github.com/wehuman01/aweshelf) | 给 AI 编程会话打书签、分类、恢复 | Python |
+| [aweskill](https://github.com/wehuman01/aweskill) | 把 agent 技能投影到 47+ agent 目录的包管理器 | Node/TypeScript |
+| [awehitch](https://github.com/wehuman01/awehitch) | 通过 MCP 把 ChatGPT 网页当本地编程 agent 的规划大脑 | Node/TypeScript |
+| [aweshare](https://github.com/wehuman01/aweshare) | 共享闲置 Ollama/vLLM 算力的本地优先中继 | Node/TypeScript |
+| [awefork](https://github.com/wehuman01/awefork) | 在任意回合 fork AI 编程会话的桌面工作台 | Electron/TypeScript |
 | [awedot](https://github.com/Webioinfo01/awedot) | 打书签并恢复编程会话的桌面悬浮球 | Tauri/Rust + TypeScript |
 
 ## v1 不做

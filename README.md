@@ -35,7 +35,7 @@ pip install awecontrib
 The repo ships a companion skill at `resources/skills/awecontrib` so coding agents know when to reach for this CLI:
 
 ```bash
-aweskill install Webioinfo01/awecontrib
+aweskill install wehuman01/awecontrib
 ```
 
 ## Commands
@@ -80,20 +80,20 @@ Edit it freely; it is yours. If your release workflow still runs `unittest disco
 
 ## In use: the awe series
 
-Every repo in the [awe series](https://github.com/Webioinfo01) runs through the same `./verify` gate — the tool is maintained against that fleet first, so each project doubles as a live case study:
+Every repo in the [awe series](https://github.com/wehuman01) runs through the same `./verify` gate — the tool is maintained against that fleet first, so each project doubles as a live case study:
 
 | Repo | What it is | Stack |
 |---|---|---|
-| [awerouter](https://github.com/Webioinfo01/awerouter) | LLM proxy that routes coding-agent traffic between flash and pro models | Python |
-| [awecompress](https://github.com/Webioinfo01/awecompress) | Context-compression proxy that freezes old conversation turns into a cached summary | Python |
-| [awewarm](https://github.com/Webioinfo01/awewarm) | Keeps AI coding subscription windows warm on a schedule | Python |
-| [aweswitch](https://github.com/Webioinfo01/aweswitch) | Switches API profiles for Claude Code, Codex, OpenCode, and ZCode | Python |
-| [awescholar](https://github.com/Webioinfo01/awescholar) | AI-operable scholarly literature search and curation CLI | Python |
-| [aweshelf](https://github.com/Webioinfo01/aweshelf) | Bookmarks, categorizes, and resumes AI coding sessions | Python |
-| [aweskill](https://github.com/Webioinfo01/aweskill) | Package manager that projects agent skills into 47+ agent directories | Node/TypeScript |
-| [awehitch](https://github.com/Webioinfo01/awehitch) | Uses ChatGPT web as the planning brain for local coding agents over MCP | Node/TypeScript |
-| [aweshare](https://github.com/Webioinfo01/aweshare) | Local-first relay that shares spare Ollama/vLLM capacity through one hub | Node/TypeScript |
-| [awefork](https://github.com/Webioinfo01/awefork) | Desktop workbench for forking AI coding sessions at any turn | Electron/TypeScript |
+| [awerouter](https://github.com/wehuman01/awerouter) | LLM proxy that routes coding-agent traffic between flash and pro models | Python |
+| [awecompress](https://github.com/wehuman01/awecompress) | Context-compression proxy that freezes old conversation turns into a cached summary | Python |
+| [awewarm](https://github.com/wehuman01/awewarm) | Keeps AI coding subscription windows warm on a schedule | Python |
+| [aweswitch](https://github.com/wehuman01/aweswitch) | Switches API profiles for Claude Code, Codex, OpenCode, and ZCode | Python |
+| [awescholar](https://github.com/wehuman01/awescholar) | AI-operable scholarly literature search and curation CLI | Python |
+| [aweshelf](https://github.com/wehuman01/aweshelf) | Bookmarks, categorizes, and resumes AI coding sessions | Python |
+| [aweskill](https://github.com/wehuman01/aweskill) | Package manager that projects agent skills into 47+ agent directories | Node/TypeScript |
+| [awehitch](https://github.com/wehuman01/awehitch) | Uses ChatGPT web as the planning brain for local coding agents over MCP | Node/TypeScript |
+| [aweshare](https://github.com/wehuman01/aweshare) | Local-first relay that shares spare Ollama/vLLM capacity through one hub | Node/TypeScript |
+| [awefork](https://github.com/wehuman01/awefork) | Desktop workbench for forking AI coding sessions at any turn | Electron/TypeScript |
 | [awedot](https://github.com/Webioinfo01/awedot) | Desktop floating ball that bookmarks and restores coding sessions | Tauri/Rust + TypeScript |
 
 ## Not in v1
