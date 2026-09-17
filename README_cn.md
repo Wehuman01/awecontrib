@@ -1,6 +1,6 @@
 <div align="center">
   <h1>awecontrib</h1>
-  <p><strong>每个仓库一条 verify 命令、一处版本真相 —— awe 系列的共享工具。</strong></p>
+  <p><strong>每个仓库一条 verify 命令、一处版本真相。</strong></p>
   <p>
     <a href="./README.md">English</a> ·
     <strong>简体中文</strong>
@@ -16,7 +16,9 @@
 
 ## 为什么做
 
-awe 系列是一个仓库一个仓库长出来的，接缝都在：有的 release workflow 跑 `unittest` 而开发时跑的是 `pytest`，有的仓库有测试却没 CI，版本号有的写在 pyproject 有的写在 `__version__`，还有几个仓库把 `egg-info`/`__pycache__` 提交进了 git。解法不是加流程，是每个仓库只留一个入口，你和 CI 都调它。
+仓库的漂移方式都一样：本地开发跑 `pytest`，release workflow 里跑的却是 `unittest discover`；有测试但 CI 从来不调；版本号散落在两个文件里；`egg-info`/`__pycache__` 悄悄进了 git。解法不是加流程，是每个仓库只留一个入口，你和 CI 都调它。
+
+awecontrib 从 [awe 系列](#实际使用-awe-系列)长出来——那是一批 CLI 和桌面工具，逐仓成长时把上面每个坑都踩了一遍。这个工具留下了教训，去掉了家族绑定：它写进仓库的文件不依赖 awecontrib，也没有命名约定，任何 Python 或 Node 仓库都能用。
 
 ## 安装
 
@@ -71,6 +73,24 @@ JUNK_RE='(\.egg-info/|__pycache__/|\.pytest_cache/|\.DS_Store$|\.pyc$|^node_modu
 ```
 
 随时可以手改，它是你的文件。如果 release workflow 里还在跑 `unittest discover`，把那一步换成 `./verify`，发布就和开发用同一套检查。
+
+## 实际使用：awe 系列
+
+[awe 系列](https://github.com/Webioinfo01)的每个仓库都跑同一条 `./verify` 门禁——这个工具先在那批仓库上维护，每个项目都是活案例：
+
+| 仓库 | 做什么 | 技术栈 |
+|---|---|---|
+| [awerouter](https://github.com/Webioinfo01/awerouter) | 把 coding agent 流量在 flash/pro 模型间分流的 LLM 代理 | Python |
+| [awecompress](https://github.com/Webioinfo01/awecompress) | 把旧对话轮冻结成缓存摘要的上下文压缩代理 | Python |
+| [awewarm](https://github.com/Webioinfo01/awewarm) | 按计划给 AI 编程订阅窗口保温 | Python |
+| [aweswitch](https://github.com/Webioinfo01/aweswitch) | 切换 Claude Code、Codex、OpenCode、ZCode 的 API profile | Python |
+| [awescholar](https://github.com/Webioinfo01/awescholar) | AI 可操作的学术文献检索与策展 CLI | Python |
+| [aweshelf](https://github.com/Webioinfo01/aweshelf) | 给 AI 编程会话打书签、分类、恢复 | Python |
+| [aweskill](https://github.com/Webioinfo01/aweskill) | 把 agent 技能投影到 47+ agent 目录的包管理器 | Node/TypeScript |
+| [awehitch](https://github.com/Webioinfo01/awehitch) | 通过 MCP 把 ChatGPT 网页当本地编程 agent 的规划大脑 | Node/TypeScript |
+| [aweshare](https://github.com/Webioinfo01/aweshare) | 共享闲置 Ollama/vLLM 算力的本地优先中继 | Node/TypeScript |
+| [awefork](https://github.com/Webioinfo01/awefork) | 在任意回合 fork AI 编程会话的桌面工作台 | Electron/TypeScript |
+| [awedot](https://github.com/Webioinfo01/awedot) | 打书签并恢复编程会话的桌面悬浮球 | Tauri/Rust + TypeScript |
 
 ## v1 不做
 

@@ -13,7 +13,7 @@ from . import __version__, bumper, hygiene, installer
 @click.group()
 @click.version_option(version=__version__, prog_name="awecontrib")
 def main() -> None:
-    """Shared tooling for the awe series: one verify entry, one version truth."""
+    """One verify entry per repo, one version truth per repo."""
 
 
 @main.command()

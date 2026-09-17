@@ -1,6 +1,6 @@
 <div align="center">
   <h1>awecontrib</h1>
-  <p><strong>One verify entry per repo, one version truth per repo — shared tooling for the awe series.</strong></p>
+  <p><strong>One verify entry per repo, one version truth per repo.</strong></p>
   <p>
     <strong>English</strong> ·
     <a href="./README_cn.md">简体中文</a>
@@ -20,7 +20,9 @@
 
 ## Why
 
-The awe series grew one repo at a time, and the seams show: some release workflows run `unittest` while development runs `pytest`, one repo has tests but no CI at all, versions live in two different places depending on the repo, and a few repos track `egg-info`/`__pycache__` junk. The fix is not more process — it is one entry point per repo that both you and CI call.
+Repos drift the same way everywhere: local development runs `pytest` while the release workflow runs `unittest discover`, tests exist but no CI ever calls them, the version lives in two places depending on the file, and `egg-info`/`__pycache__` junk quietly gets committed. The fix is not more process — it is one entry point per repo that both you and CI call.
+
+awecontrib grew out of the [awe series](#in-use-the-awe-series), a family of CLI and desktop tools that hit every one of these problems as it grew repo by repo. The tool keeps the lessons and drops the family coupling: nothing it writes depends on awecontrib or any naming convention, so any Python or Node repo can use it.
 
 ## Install
 
@@ -75,6 +77,24 @@ JUNK_RE='(\.egg-info/|__pycache__/|\.pytest_cache/|\.DS_Store$|\.pyc$|^node_modu
 ```
 
 Edit it freely; it is yours. If your release workflow still runs `unittest discover`, replace that step with `./verify` so publishing uses the same checks as development.
+
+## In use: the awe series
+
+Every repo in the [awe series](https://github.com/Webioinfo01) runs through the same `./verify` gate — the tool is maintained against that fleet first, so each project doubles as a live case study:
+
+| Repo | What it is | Stack |
+|---|---|---|
+| [awerouter](https://github.com/Webioinfo01/awerouter) | LLM proxy that routes coding-agent traffic between flash and pro models | Python |
+| [awecompress](https://github.com/Webioinfo01/awecompress) | Context-compression proxy that freezes old conversation turns into a cached summary | Python |
+| [awewarm](https://github.com/Webioinfo01/awewarm) | Keeps AI coding subscription windows warm on a schedule | Python |
+| [aweswitch](https://github.com/Webioinfo01/aweswitch) | Switches API profiles for Claude Code, Codex, OpenCode, and ZCode | Python |
+| [awescholar](https://github.com/Webioinfo01/awescholar) | AI-operable scholarly literature search and curation CLI | Python |
+| [aweshelf](https://github.com/Webioinfo01/aweshelf) | Bookmarks, categorizes, and resumes AI coding sessions | Python |
+| [aweskill](https://github.com/Webioinfo01/aweskill) | Package manager that projects agent skills into 47+ agent directories | Node/TypeScript |
+| [awehitch](https://github.com/Webioinfo01/awehitch) | Uses ChatGPT web as the planning brain for local coding agents over MCP | Node/TypeScript |
+| [aweshare](https://github.com/Webioinfo01/aweshare) | Local-first relay that shares spare Ollama/vLLM capacity through one hub | Node/TypeScript |
+| [awefork](https://github.com/Webioinfo01/awefork) | Desktop workbench for forking AI coding sessions at any turn | Electron/TypeScript |
+| [awedot](https://github.com/Webioinfo01/awedot) | Desktop floating ball that bookmarks and restores coding sessions | Tauri/Rust + TypeScript |
 
 ## Not in v1
 
