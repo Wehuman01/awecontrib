@@ -80,7 +80,7 @@ Edit it freely; it is yours. If your release workflow still runs `unittest disco
 
 ## In use: the awe series
 
-Every repo in the [awe series](https://github.com/wehuman01) runs through the same `./verify` gate — the tool is maintained against that fleet first, so each project doubles as a live case study:
+Every code repo in the [awe series](https://github.com/wehuman01) runs a verify gate before merge and release — the Python repos via the `./verify` file this tool generates, the Node/TypeScript repos via an equivalent `verify` npm script. The tool is maintained against that fleet first, so each project doubles as a live case study (awedot is the current exception: its own CI, no shared verify gate yet):
 
 | Repo | What it is | Stack |
 |---|---|---|
@@ -94,7 +94,7 @@ Every repo in the [awe series](https://github.com/wehuman01) runs through the sa
 | [awehitch](https://github.com/wehuman01/awehitch) | Uses ChatGPT web as the planning brain for local coding agents over MCP | Node/TypeScript |
 | [aweshare](https://github.com/wehuman01/aweshare) | Local-first relay that shares spare Ollama/vLLM capacity through one hub | Node/TypeScript |
 | [awefork](https://github.com/wehuman01/awefork) | Desktop workbench for forking AI coding sessions at any turn | Electron/TypeScript |
-| [awedot](https://github.com/Webioinfo01/awedot) | Desktop floating ball that bookmarks and restores coding sessions | Tauri/Rust + TypeScript |
+| [awedot](https://github.com/mugpeng/awedot) | Desktop floating ball that bookmarks and restores coding sessions | Tauri/Rust + TypeScript |
 
 The family also curates [AgentX](https://github.com/Webioinfo01/agentx-hub) — a community directory of scientific research AI agents, run on awescholar's validated pipeline.
 
